@@ -15,6 +15,9 @@
 		7952C87A13D91CDB005AF93C /* BindAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C87913D91CDB005AF93C /* BindAppDelegate.m */; };
 		7952C87D13D91CDB005AF93C /* BindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C87C13D91CDB005AF93C /* BindViewController.m */; };
 		7952C88013D91CDB005AF93C /* BindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7952C87E13D91CDB005AF93C /* BindViewController.xib */; };
+		7952C88813D91D08005AF93C /* Bind.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C88713D91D08005AF93C /* Bind.m */; };
+		7952C88F13D91DD1005AF93C /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C88E13D91DD1005AF93C /* BindingManager.m */; };
+		7952C89213D91F42005AF93C /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C89113D91F42005AF93C /* Model.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +25,21 @@
 		7952C86913D91CDB005AF93C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7952C86B13D91CDB005AF93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7952C86D13D91CDB005AF93C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		7952C87113D91CDB005AF93C /* Bind-Info.plist */ = {isa = PBXFileReference; path = "Bind-Info.plist"; sourceTree = "<group>"; };
+		7952C87113D91CDB005AF93C /* Bind-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bind-Info.plist"; sourceTree = "<group>"; };
 		7952C87313D91CDB005AF93C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7952C87513D91CDB005AF93C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7952C87713D91CDB005AF93C /* Bind-Prefix.pch */ = {isa = PBXFileReference; path = "Bind-Prefix.pch"; sourceTree = "<group>"; };
-		7952C87813D91CDB005AF93C /* BindAppDelegate.h */ = {isa = PBXFileReference; path = BindAppDelegate.h; sourceTree = "<group>"; };
+		7952C87713D91CDB005AF93C /* Bind-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bind-Prefix.pch"; sourceTree = "<group>"; };
+		7952C87813D91CDB005AF93C /* BindAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindAppDelegate.h; sourceTree = "<group>"; };
 		7952C87913D91CDB005AF93C /* BindAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindAppDelegate.m; sourceTree = "<group>"; };
-		7952C87B13D91CDB005AF93C /* BindViewController.h */ = {isa = PBXFileReference; path = BindViewController.h; sourceTree = "<group>"; };
+		7952C87B13D91CDB005AF93C /* BindViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BindViewController.h; sourceTree = "<group>"; };
 		7952C87C13D91CDB005AF93C /* BindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindViewController.m; sourceTree = "<group>"; };
 		7952C87F13D91CDB005AF93C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BindViewController.xib; sourceTree = "<group>"; };
+		7952C88613D91D08005AF93C /* Bind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bind.h; sourceTree = SOURCE_ROOT; };
+		7952C88713D91D08005AF93C /* Bind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bind.m; sourceTree = SOURCE_ROOT; };
+		7952C88D13D91DD1005AF93C /* BindingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindingManager.h; sourceTree = SOURCE_ROOT; };
+		7952C88E13D91DD1005AF93C /* BindingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindingManager.m; sourceTree = SOURCE_ROOT; };
+		7952C89013D91F42005AF93C /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		7952C89113D91F42005AF93C /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +92,12 @@
 				7952C87C13D91CDB005AF93C /* BindViewController.m */,
 				7952C87E13D91CDB005AF93C /* BindViewController.xib */,
 				7952C87013D91CDB005AF93C /* Supporting Files */,
+				7952C88613D91D08005AF93C /* Bind.h */,
+				7952C88713D91D08005AF93C /* Bind.m */,
+				7952C88D13D91DD1005AF93C /* BindingManager.h */,
+				7952C88E13D91DD1005AF93C /* BindingManager.m */,
+				7952C89013D91F42005AF93C /* Model.h */,
+				7952C89113D91F42005AF93C /* Model.m */,
 			);
 			path = Bind;
 			sourceTree = "<group>";
@@ -163,6 +178,9 @@
 				7952C87613D91CDB005AF93C /* main.m in Sources */,
 				7952C87A13D91CDB005AF93C /* BindAppDelegate.m in Sources */,
 				7952C87D13D91CDB005AF93C /* BindViewController.m in Sources */,
+				7952C88813D91D08005AF93C /* Bind.m in Sources */,
+				7952C88F13D91DD1005AF93C /* BindingManager.m in Sources */,
+				7952C89213D91F42005AF93C /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
