@@ -1,0 +1,281 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7952C86A13D91CDB005AF93C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952C86913D91CDB005AF93C /* UIKit.framework */; };
+		7952C86C13D91CDB005AF93C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952C86B13D91CDB005AF93C /* Foundation.framework */; };
+		7952C86E13D91CDB005AF93C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952C86D13D91CDB005AF93C /* CoreGraphics.framework */; };
+		7952C87413D91CDB005AF93C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7952C87213D91CDB005AF93C /* InfoPlist.strings */; };
+		7952C87613D91CDB005AF93C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C87513D91CDB005AF93C /* main.m */; };
+		7952C87A13D91CDB005AF93C /* BindAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C87913D91CDB005AF93C /* BindAppDelegate.m */; };
+		7952C87D13D91CDB005AF93C /* BindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C87C13D91CDB005AF93C /* BindViewController.m */; };
+		7952C88013D91CDB005AF93C /* BindViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7952C87E13D91CDB005AF93C /* BindViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7952C86513D91CDB005AF93C /* Bind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bind.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7952C86913D91CDB005AF93C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7952C86B13D91CDB005AF93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7952C86D13D91CDB005AF93C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7952C87113D91CDB005AF93C /* Bind-Info.plist */ = {isa = PBXFileReference; path = "Bind-Info.plist"; sourceTree = "<group>"; };
+		7952C87313D91CDB005AF93C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7952C87513D91CDB005AF93C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7952C87713D91CDB005AF93C /* Bind-Prefix.pch */ = {isa = PBXFileReference; path = "Bind-Prefix.pch"; sourceTree = "<group>"; };
+		7952C87813D91CDB005AF93C /* BindAppDelegate.h */ = {isa = PBXFileReference; path = BindAppDelegate.h; sourceTree = "<group>"; };
+		7952C87913D91CDB005AF93C /* BindAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindAppDelegate.m; sourceTree = "<group>"; };
+		7952C87B13D91CDB005AF93C /* BindViewController.h */ = {isa = PBXFileReference; path = BindViewController.h; sourceTree = "<group>"; };
+		7952C87C13D91CDB005AF93C /* BindViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BindViewController.m; sourceTree = "<group>"; };
+		7952C87F13D91CDB005AF93C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BindViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7952C86213D91CDB005AF93C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7952C86A13D91CDB005AF93C /* UIKit.framework in Frameworks */,
+				7952C86C13D91CDB005AF93C /* Foundation.framework in Frameworks */,
+				7952C86E13D91CDB005AF93C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7952C85A13D91CDB005AF93C = {
+			isa = PBXGroup;
+			children = (
+				7952C86F13D91CDB005AF93C /* Bind */,
+				7952C86813D91CDB005AF93C /* Frameworks */,
+				7952C86613D91CDB005AF93C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7952C86613D91CDB005AF93C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7952C86513D91CDB005AF93C /* Bind.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7952C86813D91CDB005AF93C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7952C86913D91CDB005AF93C /* UIKit.framework */,
+				7952C86B13D91CDB005AF93C /* Foundation.framework */,
+				7952C86D13D91CDB005AF93C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7952C86F13D91CDB005AF93C /* Bind */ = {
+			isa = PBXGroup;
+			children = (
+				7952C87813D91CDB005AF93C /* BindAppDelegate.h */,
+				7952C87913D91CDB005AF93C /* BindAppDelegate.m */,
+				7952C87B13D91CDB005AF93C /* BindViewController.h */,
+				7952C87C13D91CDB005AF93C /* BindViewController.m */,
+				7952C87E13D91CDB005AF93C /* BindViewController.xib */,
+				7952C87013D91CDB005AF93C /* Supporting Files */,
+			);
+			path = Bind;
+			sourceTree = "<group>";
+		};
+		7952C87013D91CDB005AF93C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7952C87113D91CDB005AF93C /* Bind-Info.plist */,
+				7952C87213D91CDB005AF93C /* InfoPlist.strings */,
+				7952C87513D91CDB005AF93C /* main.m */,
+				7952C87713D91CDB005AF93C /* Bind-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7952C86413D91CDB005AF93C /* Bind */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7952C88313D91CDB005AF93C /* Build configuration list for PBXNativeTarget "Bind" */;
+			buildPhases = (
+				7952C86113D91CDB005AF93C /* Sources */,
+				7952C86213D91CDB005AF93C /* Frameworks */,
+				7952C86313D91CDB005AF93C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bind;
+			productName = Bind;
+			productReference = 7952C86513D91CDB005AF93C /* Bind.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7952C85C13D91CDB005AF93C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Ayal Spitz";
+			};
+			buildConfigurationList = 7952C85F13D91CDB005AF93C /* Build configuration list for PBXProject "Bind" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7952C85A13D91CDB005AF93C;
+			productRefGroup = 7952C86613D91CDB005AF93C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7952C86413D91CDB005AF93C /* Bind */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7952C86313D91CDB005AF93C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7952C87413D91CDB005AF93C /* InfoPlist.strings in Resources */,
+				7952C88013D91CDB005AF93C /* BindViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7952C86113D91CDB005AF93C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7952C87613D91CDB005AF93C /* main.m in Sources */,
+				7952C87A13D91CDB005AF93C /* BindAppDelegate.m in Sources */,
+				7952C87D13D91CDB005AF93C /* BindViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7952C87213D91CDB005AF93C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7952C87313D91CDB005AF93C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7952C87E13D91CDB005AF93C /* BindViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7952C87F13D91CDB005AF93C /* en */,
+			);
+			name = BindViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7952C88113D91CDB005AF93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7952C88213D91CDB005AF93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7952C88413D91CDB005AF93C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bind/Bind-Prefix.pch";
+				INFOPLIST_FILE = "Bind/Bind-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7952C88513D91CDB005AF93C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bind/Bind-Prefix.pch";
+				INFOPLIST_FILE = "Bind/Bind-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7952C85F13D91CDB005AF93C /* Build configuration list for PBXProject "Bind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7952C88113D91CDB005AF93C /* Debug */,
+				7952C88213D91CDB005AF93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7952C88313D91CDB005AF93C /* Build configuration list for PBXNativeTarget "Bind" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7952C88413D91CDB005AF93C /* Debug */,
+				7952C88513D91CDB005AF93C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7952C85C13D91CDB005AF93C /* Project object */;
+}
