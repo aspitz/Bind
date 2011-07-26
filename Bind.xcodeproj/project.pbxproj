@@ -139,6 +139,7 @@
 		7952C85C13D91CDB005AF93C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Ayal Spitz";
 			};
 			buildConfigurationList = 7952C85F13D91CDB005AF93C /* Build configuration list for PBXProject "Bind" */;
@@ -292,6 +293,7 @@
 				7952C88513D91CDB005AF93C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

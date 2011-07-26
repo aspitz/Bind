@@ -15,12 +15,9 @@
 
 + (BindingManager *)sharedManager;
 
-- (id)link:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath;
-
-- (id)link:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath withTransform:(TransformBlock)block;
-
-- (id)link:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath withValidation:(ValidationBlock)block;
-
-- (id)link:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath withTransform:(TransformBlock)tBlock andValidation:(ValidationBlock)vBlock;
+- (id)bind:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath;
+- (id)bind:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath withTransform:(TransformBlock)block;
+- (id)bind:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath withValidation:(ValidationBlock)block;
+- (id)bind:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath withTransform:(TransformBlock)tBlock andValidation:(ValidationBlock)vBlock;
 
 @end

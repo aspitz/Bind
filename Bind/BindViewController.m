@@ -38,7 +38,7 @@
     
     // Link changes in the model.pt to change the views center
     //  this link includes a transform of the point as well as a validation of the point
-    [[BindingManager sharedManager] link:self atKeyPath:@"aModel.pt" to:self atKeyPath:@"aView.center"
+    [[BindingManager sharedManager] bind:self atKeyPath:@"aModel.pt" to:self atKeyPath:@"aView.center"
                                 withTransform:^NSObject *(NSObject *inObj){
                                     return inObj;
                                 } andValidation:^BOOL(NSObject *inObj) {
