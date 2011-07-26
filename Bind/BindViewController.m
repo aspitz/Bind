@@ -15,6 +15,7 @@
 @implementation BindViewController
 
 @synthesize viewModelDictionary;
+@synthesize label;
 
 - (void)didReceiveMemoryWarning
 {
@@ -41,13 +42,14 @@
     
     // Link changes in the model.pt to change the views center
     //  this link includes a transform of the point as well as a validation of the point
-    [[BindingManager sharedManager] bind:aModel atKeyPath:@"pt" to:aView atKeyPath:@"center"
+    [[BindingManager sharedManager] bind:aModel atKeyPath:@"pt" to:aView atKeyPath:@"center"];
+
+    [[BindingManager sharedManager] bind:aModel atKeyPath:@"pt" to:self atKeyPath:@"label.text"
                            withTransform:^NSObject *(NSObject *inObj){
-                               return inObj;
-                           } andValidation:^BOOL(NSObject *inObj) {
-                               return YES;
+                               CGPoint pt = [((NSValue *)inObj) CGPointValue];
+                               return [NSString stringWithFormat:@"%f,%f", pt.x, pt.y];
                            }];
-    
+
     // Create a pan gesture to drag around the view
     [aView recognizePanGestureWithTarget:self action:@selector(handlePanGesture:)];
     

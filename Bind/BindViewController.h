@@ -11,6 +11,7 @@
 @interface BindViewController : UIViewController
 
 @property (nonatomic, strong) NSMutableDictionary *viewModelDictionary;
+@property (nonatomic, strong) IBOutlet UILabel *label;
 
 - (void)handlePanGesture:(UIGestureRecognizer *)gestureRecognizer;
 
