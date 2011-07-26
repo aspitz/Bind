@@ -11,6 +11,7 @@
 @interface UIView (Gestures)
 
 - (UITapGestureRecognizer *)recognizeTapGestureWithTarget:(id)target action:(SEL)action;
+- (UITapGestureRecognizer *)recognizeDoubleTapGestureWithTarget:(id)target action:(SEL)action;
 - (UIPanGestureRecognizer *)recognizePanGestureWithTarget:(id)target action:(SEL)action;
 
 @end
