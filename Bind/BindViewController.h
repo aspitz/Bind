@@ -8,15 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class Model;
-@class ObserverLink;
-
 @interface BindViewController : UIViewController
 
-@property (nonatomic, strong) UIView *aView;
-@property (nonatomic, strong) Model *aModel;
+@property (nonatomic, strong) NSMutableDictionary *viewModelDictionary;
 
 - (void)handlePanGesture:(UIGestureRecognizer *)gestureRecognizer;
-- (void)handleTapGesture:(UIGestureRecognizer *)gestureRecognizer;
 
 @end

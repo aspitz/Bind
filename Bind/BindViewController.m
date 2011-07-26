@@ -9,11 +9,12 @@
 #import "BindViewController.h"
 #import "BindingManager.h"
 #import "Model.h"
+#import "UIView+Gestures.h"
+#import "NSMutableDictionary+NSObjectKeys.h"
 
 @implementation BindViewController
 
-@synthesize aView;
-@synthesize aModel;
+@synthesize viewModelDictionary;
 
 - (void)didReceiveMemoryWarning
 {
@@ -27,33 +28,30 @@
 {
     [super viewDidLoad];
     
-    // Create a view
-    self.aView = [[UIView alloc]initWithFrame:CGRectMake(0.0, 0.0, 20.0, 20.0)];
-    self.aView.backgroundColor = [UIColor grayColor];
-    self.aView.userInteractionEnabled = YES;
-    [self.view addSubview:self.aView];
+    self.viewModelDictionary = [[NSMutableDictionary alloc]init];
     
+    // Create a view
+    UIView *aView = [[UIView alloc]initWithFrame:CGRectMake(0.0, 0.0, 20.0, 20.0)];
+    aView.backgroundColor = [UIColor grayColor];
+    aView.userInteractionEnabled = YES;
+    [self.view addSubview:aView];
+
     // Create a model
-    self.aModel = [[Model alloc]init];
+    Model *aModel = [[Model alloc]init];
     
     // Link changes in the model.pt to change the views center
     //  this link includes a transform of the point as well as a validation of the point
-    [[BindingManager sharedManager] bind:self atKeyPath:@"aModel.pt" to:self atKeyPath:@"aView.center"
-                                withTransform:^NSObject *(NSObject *inObj){
-                                    return inObj;
-                                } andValidation:^BOOL(NSObject *inObj) {
-                                    return YES;
-                                }
-     ];
+    [[BindingManager sharedManager] bind:aModel atKeyPath:@"pt" to:aView atKeyPath:@"center"
+                           withTransform:^NSObject *(NSObject *inObj){
+                               return inObj;
+                           } andValidation:^BOOL(NSObject *inObj) {
+                               return YES;
+                           }];
     
     // Create a pan gesture to drag around the view
-    UIGestureRecognizer *gesture = nil;
-    gesture = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(handlePanGesture:)];
-    [self.view addGestureRecognizer:gesture];
+    [aView recognizePanGestureWithTarget:self action:@selector(handlePanGesture:)];
     
-    // Create a tap gesture to move the view
-    gesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTapGesture:)];
-    [self.view addGestureRecognizer:gesture];
+    [viewModelDictionary setObject:aModel forNSObjectKey:aView];
 }
 
 - (void)viewDidUnload
@@ -93,15 +91,11 @@
 // Handle the pan gesture
 - (void)handlePanGesture:(UIGestureRecognizer *)gestureRecognizer{
     CGPoint pt = [gestureRecognizer locationInView:self.view];
-    // Update the models point
-    self.aModel.pt = pt;
-}
 
-// Handle the tap gesture
-- (void)handleTapGesture:(UIGestureRecognizer *)gestureRecognizer{
-    CGPoint pt = [gestureRecognizer locationInView:self.view];
+    Model *model = [viewModelDictionary objectForNSObjectKey:gestureRecognizer.view];
+    
     // Update the models point
-    self.aModel.pt = pt;
+    model.pt = pt;
 }
 
 @end
