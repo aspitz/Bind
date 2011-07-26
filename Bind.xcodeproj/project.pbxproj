@@ -18,6 +18,8 @@
 		7952C88813D91D08005AF93C /* Bind.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C88713D91D08005AF93C /* Bind.m */; };
 		7952C88F13D91DD1005AF93C /* BindingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C88E13D91DD1005AF93C /* BindingManager.m */; };
 		7952C89213D91F42005AF93C /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C89113D91F42005AF93C /* Model.m */; };
+		7989E04713DE71E100892785 /* UIView+Gestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E04613DE71E100892785 /* UIView+Gestures.m */; };
+		7989E04A13DE735000892785 /* NSMutableDictionary+NSObjectKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E04913DE735000892785 /* NSMutableDictionary+NSObjectKeys.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,10 @@
 		7952C88E13D91DD1005AF93C /* BindingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindingManager.m; sourceTree = SOURCE_ROOT; };
 		7952C89013D91F42005AF93C /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		7952C89113D91F42005AF93C /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
+		7989E04513DE71E100892785 /* UIView+Gestures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gestures.h"; sourceTree = "<group>"; };
+		7989E04613DE71E100892785 /* UIView+Gestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gestures.m"; sourceTree = "<group>"; };
+		7989E04813DE735000892785 /* NSMutableDictionary+NSObjectKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NSObjectKeys.h"; sourceTree = "<group>"; };
+		7989E04913DE735000892785 /* NSMutableDictionary+NSObjectKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NSObjectKeys.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,10 @@
 				7952C88E13D91DD1005AF93C /* BindingManager.m */,
 				7952C89013D91F42005AF93C /* Model.h */,
 				7952C89113D91F42005AF93C /* Model.m */,
+				7989E04513DE71E100892785 /* UIView+Gestures.h */,
+				7989E04613DE71E100892785 /* UIView+Gestures.m */,
+				7989E04813DE735000892785 /* NSMutableDictionary+NSObjectKeys.h */,
+				7989E04913DE735000892785 /* NSMutableDictionary+NSObjectKeys.m */,
 			);
 			path = Bind;
 			sourceTree = "<group>";
@@ -182,6 +192,8 @@
 				7952C88813D91D08005AF93C /* Bind.m in Sources */,
 				7952C88F13D91DD1005AF93C /* BindingManager.m in Sources */,
 				7952C89213D91F42005AF93C /* Model.m in Sources */,
+				7989E04713DE71E100892785 /* UIView+Gestures.m in Sources */,
+				7989E04A13DE735000892785 /* NSMutableDictionary+NSObjectKeys.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
