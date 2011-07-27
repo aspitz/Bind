@@ -14,5 +14,6 @@
 @property (nonatomic, strong) IBOutlet UILabel *label;
 
 - (void)handlePanGesture:(UIGestureRecognizer *)gestureRecognizer;
+- (void)handleTapGesture:(UIGestureRecognizer *)gestureRecognizer;
 
 @end

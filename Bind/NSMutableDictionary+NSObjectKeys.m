@@ -20,4 +20,9 @@
     return [self objectForKey:key];
 }
 
+- (void)removeObjectForNSObjectKey:(NSObject *)anNSObjectKey{
+    NSString *key = [NSString stringWithFormat:@"%d", anNSObjectKey.hash];
+    [self removeObjectForKey:key];
+}
+
 @end

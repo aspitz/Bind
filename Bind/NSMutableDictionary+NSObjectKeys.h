@@ -12,5 +12,6 @@
 
 - (void)setObject:(id)anObject forNSObjectKey:(NSObject *)anNSObjectKey;
 - (id)objectForNSObjectKey:(NSObject *)anNSObjectKey;
+- (void)removeObjectForNSObjectKey:(NSObject *)anNSObjectKey;
 
 @end
