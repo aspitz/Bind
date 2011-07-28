@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793CF61513E1A15400F24396 /* NSString+Index.m in Sources */ = {isa = PBXBuildFile; fileRef = 793CF61413E1A15400F24396 /* NSString+Index.m */; };
 		7952C86A13D91CDB005AF93C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952C86913D91CDB005AF93C /* UIKit.framework */; };
 		7952C86C13D91CDB005AF93C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952C86B13D91CDB005AF93C /* Foundation.framework */; };
 		7952C86E13D91CDB005AF93C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7952C86D13D91CDB005AF93C /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		793CF61313E1A15400F24396 /* NSString+Index.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Index.h"; sourceTree = "<group>"; };
+		793CF61413E1A15400F24396 /* NSString+Index.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Index.m"; sourceTree = "<group>"; };
 		7952C86513D91CDB005AF93C /* Bind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7952C86913D91CDB005AF93C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7952C86B13D91CDB005AF93C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +68,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		793CF61113E1A13100F24396 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7989E04513DE71E100892785 /* UIView+Gestures.h */,
+				7989E04613DE71E100892785 /* UIView+Gestures.m */,
+				7989E04813DE735000892785 /* NSMutableDictionary+NSObjectKeys.h */,
+				7989E04913DE735000892785 /* NSMutableDictionary+NSObjectKeys.m */,
+				79FE31F313E171A9009EC5B6 /* PanGestureRecognizer.h */,
+				79FE31F413E171A9009EC5B6 /* PanGestureRecognizer.m */,
+				793CF61313E1A15400F24396 /* NSString+Index.h */,
+				793CF61413E1A15400F24396 /* NSString+Index.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		7952C85A13D91CDB005AF93C = {
 			isa = PBXGroup;
 			children = (
@@ -107,12 +125,7 @@
 				7952C88E13D91DD1005AF93C /* BindingManager.m */,
 				7952C89013D91F42005AF93C /* Model.h */,
 				7952C89113D91F42005AF93C /* Model.m */,
-				7989E04513DE71E100892785 /* UIView+Gestures.h */,
-				7989E04613DE71E100892785 /* UIView+Gestures.m */,
-				7989E04813DE735000892785 /* NSMutableDictionary+NSObjectKeys.h */,
-				7989E04913DE735000892785 /* NSMutableDictionary+NSObjectKeys.m */,
-				79FE31F313E171A9009EC5B6 /* PanGestureRecognizer.h */,
-				79FE31F413E171A9009EC5B6 /* PanGestureRecognizer.m */,
+				793CF61113E1A13100F24396 /* Utils */,
 			);
 			path = Bind;
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 				7989E04713DE71E100892785 /* UIView+Gestures.m in Sources */,
 				7989E04A13DE735000892785 /* NSMutableDictionary+NSObjectKeys.m in Sources */,
 				79FE31F513E171A9009EC5B6 /* PanGestureRecognizer.m in Sources */,
+				793CF61513E1A15400F24396 /* NSString+Index.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
