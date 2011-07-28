@@ -11,6 +11,7 @@
 #import "Model.h"
 #import "UIView+Gestures.h"
 #import "NSMutableDictionary+NSObjectKeys.h"
+#import "PanGestureRecognizer.h"
 
 @implementation BindViewController
 
@@ -31,13 +32,16 @@
     
     self.viewModelDictionary = [[NSMutableDictionary alloc]init];
     [self.view recognizeTapGestureWithTarget:self action:@selector(handleTapGesture:)];    
+    [self.view recognizePanGestureWithTarget:self action:@selector(handlePanGesture:)];    
 }
 
 // Handle the pan gesture
 - (void)handlePanGesture:(UIGestureRecognizer *)gestureRecognizer{
+    UIView *tempView = ((PanGestureRecognizer *)gestureRecognizer).startingView;
+    
     CGPoint pt = [gestureRecognizer locationInView:self.view];
 
-    Model *model = [viewModelDictionary objectForNSObjectKey:gestureRecognizer.view];
+    Model *model = [viewModelDictionary objectForNSObjectKey:tempView];
     
     // Update the models point
     model.pt = pt;
@@ -68,7 +72,7 @@
                            }];
     
     // Create a pan gesture to drag around the view
-    [aView recognizePanGestureWithTarget:self action:@selector(handlePanGesture:)];
+    //[aView recognizePanGestureWithTarget:self action:@selector(handlePanGesture:)];
     
     [viewModelDictionary setObject:aModel forNSObjectKey:aView];
 }

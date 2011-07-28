@@ -20,6 +20,7 @@
 		7952C89213D91F42005AF93C /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 7952C89113D91F42005AF93C /* Model.m */; };
 		7989E04713DE71E100892785 /* UIView+Gestures.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E04613DE71E100892785 /* UIView+Gestures.m */; };
 		7989E04A13DE735000892785 /* NSMutableDictionary+NSObjectKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7989E04913DE735000892785 /* NSMutableDictionary+NSObjectKeys.m */; };
+		79FE31F513E171A9009EC5B6 /* PanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 79FE31F413E171A9009EC5B6 /* PanGestureRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,8 @@
 		7989E04613DE71E100892785 /* UIView+Gestures.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gestures.m"; sourceTree = "<group>"; };
 		7989E04813DE735000892785 /* NSMutableDictionary+NSObjectKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+NSObjectKeys.h"; sourceTree = "<group>"; };
 		7989E04913DE735000892785 /* NSMutableDictionary+NSObjectKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+NSObjectKeys.m"; sourceTree = "<group>"; };
+		79FE31F313E171A9009EC5B6 /* PanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanGestureRecognizer.h; sourceTree = "<group>"; };
+		79FE31F413E171A9009EC5B6 /* PanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanGestureRecognizer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 				7989E04613DE71E100892785 /* UIView+Gestures.m */,
 				7989E04813DE735000892785 /* NSMutableDictionary+NSObjectKeys.h */,
 				7989E04913DE735000892785 /* NSMutableDictionary+NSObjectKeys.m */,
+				79FE31F313E171A9009EC5B6 /* PanGestureRecognizer.h */,
+				79FE31F413E171A9009EC5B6 /* PanGestureRecognizer.m */,
 			);
 			path = Bind;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				7952C89213D91F42005AF93C /* Model.m in Sources */,
 				7989E04713DE71E100892785 /* UIView+Gestures.m in Sources */,
 				7989E04A13DE735000892785 /* NSMutableDictionary+NSObjectKeys.m in Sources */,
+				79FE31F513E171A9009EC5B6 /* PanGestureRecognizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
