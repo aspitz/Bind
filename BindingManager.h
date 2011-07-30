@@ -15,9 +15,9 @@
 
 + (BindingManager *)sharedManager;
 
-- (id)bind:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath;
-- (id)bind:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath withTransform:(TransformBlock)block;
-- (id)bind:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath withValidation:(ValidationBlock)block;
-- (id)bind:(NSObject *)src atKeyPath:(NSString *)srcPath to:(NSObject *)dst atKeyPath:(NSString *)dstPath withTransform:(TransformBlock)tBlock andValidation:(ValidationBlock)vBlock;
+- (id)bind:(NSString *)dstPath of:(NSObject *)dst to:(NSString *)srcPath of:(NSObject *)src;
+- (id)bind:(NSString *)dstPath of:(NSObject *)dst to:(NSString *)srcPath of:(NSObject *)src withTransform:(TransformBlock)block;
+- (id)bind:(NSString *)dstPath of:(NSObject *)dst to:(NSString *)srcPath of:(NSObject *)src withValidation:(ValidationBlock)block;
+- (id)bind:(NSString *)dstPath of:(NSObject *)dst to:(NSString *)srcPath of:(NSObject *)src withTransform:(TransformBlock)tBlock andValidation:(ValidationBlock)vBlock;
 
 @end
