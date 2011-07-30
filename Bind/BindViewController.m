@@ -63,9 +63,8 @@
     
     // Link changes in the model.pt to change the views center
     //  this link includes a transform of the point as well as a validation of the point
-    [[BindingManager sharedManager] bind:aModel atKeyPath:@"pt" to:aView atKeyPath:@"center"];
-    
-    [[BindingManager sharedManager] bind:aModel atKeyPath:@"pt" to:self atKeyPath:@"label.text"
+    [[BindingManager sharedManager] bind:@"center" of:aView to:@"pt" of:aModel];    
+    [[BindingManager sharedManager] bind:@"label.text" of:self to:@"pt" of:aModel 
                            withTransform:^NSObject *(NSObject *inObj){
                                CGPoint pt = [((NSValue *)inObj) CGPointValue];
                                return [NSString stringWithFormat:@"%f,%f", pt.x, pt.y];
