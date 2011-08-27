@@ -43,26 +43,34 @@
 
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context{
-    // Extract the new value from the change dictionary
-    NSObject *value = [change valueForKey:NSKeyValueChangeNewKey];
     
-    // Test to see if this ObserverLink has a validation block
-    if (self.validation != nil){
-        // If there is a validation block then test the value
-        if (!self.validation(value)){
-            // If the value fails the validation block then return
-            return;
+    /*[change enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        NSLog(@"key: %@ - value: %@", key, obj);
+    }];*/
+    
+    NSNumber *kind = [change valueForKey:NSKeyValueChangeKindKey];
+    if ([kind intValue] == NSKeyValueChangeSetting){
+        // Extract the new value from the change dictionary
+        NSObject *value = [change valueForKey:NSKeyValueChangeNewKey];
+
+        // Test to see if this ObserverLink has a validation block
+        if (self.validation != nil){
+            // If there is a validation block then test the value
+            if (!self.validation(value)){
+                // If the value fails the validation block then return
+                return;
+            }
         }
+        
+        // Test to see if this ObserverLink has a transform block
+        if (self.transform != nil){
+            // If there is a transform block then apply it to the value
+            value = self.transform(value);
+        }
+        
+        // Set the value of the destination object at the given key path
+        [self.dstObj setValue:value forKeyPath:self.dstKeyPath];    
     }
-    
-    // Test to see if this ObserverLink has a transform block
-    if (self.transform != nil){
-        // If there is a transform block then apply it to the value
-        value = self.transform(value);
-    }
-    
-    // Set the value of the destination object at the given key path
-    [self.dstObj setValue:value forKeyPath:self.dstKeyPath];    
 }
 
 - (void)remove{
