@@ -12,11 +12,16 @@
 #import "UIView+Gestures.h"
 #import "NSMutableDictionary+NSObjectKeys.h"
 #import "PanGestureRecognizer.h"
+#import "CollectionBind.h"
+#import "UIGestureRecognizer+View.h"
 
 @implementation BindViewController
 
 @synthesize viewModelDictionary;
-@synthesize label;
+
+@synthesize location;
+@synthesize count;
+@synthesize models;
 
 - (void)didReceiveMemoryWarning
 {
@@ -29,10 +34,50 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.viewModelDictionary = [[NSMutableDictionary alloc]init];
+
     [self.view recognizeTapGestureWithTarget:self action:@selector(handleTapGesture:)];    
+    [self.view recognizeDoubleTapGestureWithTarget:self action:@selector(handleDoubleTapGesture:)];    
     [self.view recognizePanGestureWithTarget:self action:@selector(handlePanGesture:)];    
+
+    self.models = [[NSMutableSet alloc]init];
+    [BindingManager bindCollection:@"view" of:self to:@"models" of:self
+                           withAdd:^(NSObject *value, NSObject *obj, NSString *keyPath){
+                                    Model *aModel = (Model *)value;
+                                    BindViewController *blockSelf = (BindViewController *)obj;
+                            
+                                    // Create a view
+                                    UIView *aView = [[UIView alloc]initWithFrame:CGRectMake(0.0, 0.0, 20.0, 20.0)];
+                                    aView.center = aModel.pt;
+                                    aView.backgroundColor = [UIColor grayColor];
+                                    aView.userInteractionEnabled = YES;
+                                    [blockSelf.view addSubview:aView];
+                                
+                                    // Bind the views center to the model.pt
+                                    [BindingManager bind:@"center" of:aView to:@"pt" of:aModel];    
+                                
+                                    [blockSelf.viewModelDictionary setObject:aModel forNSObjectKey:aView];
+                                    [blockSelf.viewModelDictionary setObject:aView forNSObjectKey:aModel];
+                                }
+                                andRemove:^(NSObject *value, NSObject *obj, NSString *keyPath) {
+                                    Model *aModel = (Model *)value;
+                                    BindViewController *blockSelf = (BindViewController *)obj;
+                                
+                                    UIView *aView = [blockSelf.viewModelDictionary objectForNSObjectKey:aModel];
+                                
+                                    [blockSelf.viewModelDictionary removeObjectForNSObjectKey:aModel];
+                                    [blockSelf.viewModelDictionary removeObjectForNSObjectKey:aView];
+                                
+                                    [aView removeFromSuperview];
+                                }
+     ];
+    
+    [BindingManager bind:@"count.text" of:self to:@"models.@count" of:self 
+           withTransform:^NSObject *(NSObject *inObj){
+               return [inObj description];
+           }
+     ];
 }
 
 // Handle the pan gesture
@@ -49,31 +94,35 @@
 
 // Handle the tap gesture
 - (void)handleTapGesture:(UIGestureRecognizer *)gestureRecognizer{
-    CGPoint pt = [gestureRecognizer locationInView:self.view];
+    UIView *tempView = [gestureRecognizer touchedView];
     
-    // Create a view
-    UIView *aView = [[UIView alloc]initWithFrame:CGRectMake(0.0, 0.0, 20.0, 20.0)];
-    aView.center = pt;
-    aView.backgroundColor = [UIColor grayColor];
-    aView.userInteractionEnabled = YES;
-    [self.view addSubview:aView];
-    
-    // Create a model
-    Model *aModel = [[Model alloc]init];
-    
-    // Link changes in the model.pt to change the views center
-    //  this link includes a transform of the point as well as a validation of the point
-    [[BindingManager sharedManager] bind:@"center" of:aView to:@"pt" of:aModel];    
-    [[BindingManager sharedManager] bind:@"label.text" of:self to:@"pt" of:aModel 
-                           withTransform:^NSObject *(NSObject *inObj){
-                               CGPoint pt = [((NSValue *)inObj) CGPointValue];
-                               return [NSString stringWithFormat:@"%f,%f", pt.x, pt.y];
-                           }];
-    
-    // Create a pan gesture to drag around the view
-    //[aView recognizePanGestureWithTarget:self action:@selector(handlePanGesture:)];
-    
-    [viewModelDictionary setObject:aModel forNSObjectKey:aView];
+    if (tempView == self.view){
+        // Create a model
+        Model *aModel = [[Model alloc]init];
+        aModel.pt = [gestureRecognizer locationInView:self.view];
+
+        // Bind the label text to the model.pt using a transform
+        [BindingManager bind:@"location.text" of:self to:@"pt" of:aModel 
+               withTransform:^NSObject *(NSObject *inObj){
+                   CGPoint pt = [((NSValue *)inObj) CGPointValue];
+                   return [NSString stringWithFormat:@"%f,%f", pt.x, pt.y];
+               }
+         ];
+        
+        NSMutableSet *modelSet = [self mutableSetValueForKeyPath:@"models"];
+        [modelSet addObject:aModel];
+    }
+}
+
+// Handle the tap gesture
+- (void)handleDoubleTapGesture:(UIGestureRecognizer *)gestureRecognizer{
+    UIView *tempView = [gestureRecognizer touchedView];
+
+    if (tempView != self.view){
+        Model *aModel = [self.viewModelDictionary objectForNSObjectKey:tempView];
+        NSMutableSet *modelSet = [self mutableSetValueForKeyPath:@"models"];
+        [modelSet removeObject:aModel];
+    }
 }
 
 @end
